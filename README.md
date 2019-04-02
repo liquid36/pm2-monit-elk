@@ -2,6 +2,8 @@
 
 Automatically send pm2 monit stasts to Elasticsearch
 
+![Kibana Dashboard](https://github.com/liquid36/pm2-monit-elk/blob/master/kibana-dashboard.png "Kibana Dashboard")
+
 # pm2-monit-elk
 
 ## Install
@@ -9,7 +11,7 @@ Automatically send pm2 monit stasts to Elasticsearch
 ```bash
 $ npm install pm2 -g
 
-$ pm2 install pm2-server-monit-elasticsearch
+$ pm2 install pm2-monit-elk
 ```
 
 ## Configuration
@@ -25,11 +27,11 @@ Default settings:
 To modify the config values you can use Keymetrics dashboard or the following commands:
 
 ```bash
-pm2 set pm2-server-monit-elasticsearch:interval 2
-pm2 set pm2-server-monit-elasticsearch:elasticsearch_url es.example.com:9200
-pm2 set pm2-server-monit-elasticsearch:elasticsearch_index server_monitoring_new
-pm2 set pm2-server-monit-elasticsearch:elasticsearch_user username
-pm2 set pm2-server-monit-elasticsearch:elasticsearch_password password
+pm2 set pm2-monit-elk:interval 2
+pm2 set pm2-monit-elk:elasticsearch_url es.example.com:9200
+pm2 set pm2-monit-elk:elasticsearch_index server_monitoring_new
+pm2 set pm2-monit-elk:elasticsearch_user username
+pm2 set pm2-monit-elk:elasticsearch_password password
 ```
 
 NOTE: If basic authentication is enabled on your elasticsearch, specially via Search Guard, provide username and password as part of host url e.g. "http://username:pass@localhost:9200"
