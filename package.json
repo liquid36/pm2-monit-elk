@@ -18,5 +18,12 @@
     "pmx": "latest",
     "winston": "^3.0.0",
     "winston-elasticsearch": "^0.7.9"
-  }
+  },
+  "apps": [
+    {
+      "name": "pm2-monit-elk",
+      "script": "app.js",
+      "max_memory_restart": "150M"
+    }
+  ]
 }
