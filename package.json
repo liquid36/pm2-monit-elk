@@ -1,6 +1,6 @@
 {
   "name": "pm2-monit-elk",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Send pm2 monit to Elasticsearch",
   "repository": {
     "type": "git",
