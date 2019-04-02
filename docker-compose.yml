@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+ pm2_kibana:
+    image: blacktop/kibana:6.7 
+    container_name: pm2_kibana
+    ports:
+      - "5601:5601"
+    environment:
+      SERVER_NAME: pm2_kibana
+      SERVER_PORT: 5601
+      SEVER_HOST: localhost
+      KIBANA_ELASTICSEARCH_URL: http://pm2_elastic:9200
+ pm2_elasticsearch:
+    image: blacktop/elasticsearch:6.7 
+    container_name: pm2_elastic
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - transport.host=127.0.0.1
+      - http.host=0.0.0.0
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 1g
+    volumes:
+      - velastic:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200" 
+volumes:
+  velastic:
+    driver: local

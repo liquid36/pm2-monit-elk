@@ -1,0 +1,22 @@
+{
+  "name": "pm2-monit-elk",
+  "version": "0.9.0",
+  "description": "Send pm2 monit to Elasticsearch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liquid36/pm2-monit-elk"
+  },
+  "config": {
+    "interval": "5"
+  },
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "elasticsearch": "^15.0.0",
+    "pm2": "^2.10.4",
+    "pmx": "latest",
+    "winston": "^3.0.0",
+    "winston-elasticsearch": "^0.7.9"
+  }
+}
