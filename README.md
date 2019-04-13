@@ -41,13 +41,13 @@ NOTE: If basic authentication is enabled on your elasticsearch, specially via Se
 ## Uninstall
 
 ```bash
-$ pm2 uninstall pm2-server-monit-elasticsearch
+$ pm2 uninstall pm2-monit-elk
 ```
 
 ## Update to latest version
 
 ```bash
-$ pm2 module:update pm2-server-monit-elasticsearch
+$ pm2 module:update pm2-monit-elk
 ```
 
 # License
